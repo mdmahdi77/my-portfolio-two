@@ -59,7 +59,7 @@ const Footer = () => {
                 <div className="footer__col1">
                     <h1 className="footer__col1__title">Mehedi Hasan</h1>
                     <PText>
-                        A freelance web designer and developer from Chittagong, Bangladesh.
+                        A web designer and frontend web developer from Rajshahi, Bangladesh.
                         I always make websites that have unique designs and also has a good
                         performance rate.
                     </PText>
@@ -96,15 +96,15 @@ const Footer = () => {
                         heading="Contact Info"
                         links={[
                             {
-                                title: '+88012312',
-                                path: 'tel:+88012312',
+                                title: '+8801776875449',
+                                path: 'tel:+8801776875449',
                             },
                             {
-                                title: 'webcifar@gmail.com',
-                                path: 'mailto:webcifar@gmail.com',
+                                title: 'mehedihasanibnc@gmail.com',
+                                path: 'mehedihasanibnc@gmail.com',
                             },
                             {
-                                title: 'GEC Circle, Chittagong, Bangladesh',
+                                title: 'Mirjapur, Binodpur Bazar, Motihar, Rajshahi, Bangladesh',
                                 path: 'http://google.com/maps',
                             },
                         ]}
@@ -116,15 +116,15 @@ const Footer = () => {
                         links={[
                             {
                                 title: 'Facebook',
-                                path: 'http://facebook.com',
+                                path: 'https://www.facebook.com/profile.php?id=100006789187624',
                             },
                             {
-                                title: 'Twitter',
-                                path: 'http://twitter.com',
+                                title: 'Linkedin',
+                                path: 'https://www.linkedin.com/in/mehedi-hasan-389425211/',
                             },
                             {
-                                title: 'Instagram',
-                                path: 'http://instagram.com',
+                                title: 'Github',
+                                path: 'https://github.com/mdmahdi77',
                             },
                         ]}
                     ></FooterCol>
@@ -133,10 +133,7 @@ const Footer = () => {
             <div className="copyright">
                     <div className="container">
                         <PText>
-                            © 2021 - Mehedi Hasan | Designed By{' '}
-                            <a target="_blank" rel="noreferrer" href="http://webcifar.com">
-                                web cifar
-                            </a>{' '}
+                            © 2021 - Designed by | Mehedi Hasan
                         </PText>
                     </div>
                 </div>

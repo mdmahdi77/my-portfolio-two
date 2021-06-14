@@ -21,7 +21,7 @@ const NavMenuStyles = styled.div`
             border-radius: 8px;
             transition: 0.3s ease background-color;
             & hover: {
-                background-color: var(--deep-dark);
+                background-color: red;
             }
         }
         a{
@@ -43,6 +43,7 @@ const NavMenuStyles = styled.div`
         width: 4rem;
         outline: none;
         display: none;
+        cursor: pointer;
         *{
             pointer-events: none;
         }

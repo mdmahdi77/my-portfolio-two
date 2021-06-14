@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import PText from '../components/PText';
-import Button from '../components/Button';
-import AboutImg from '../assets/images/about-page-img.png'
+import AboutImg from '../assets/images/about3.png'
 import AboutInfoItem from '../components/AboutInfoItem';
 import ContactBanner from '../components/ContactBanner';
 import Footer from '../components/Footer';
+import resume from '../assets/resume/resume-7.pdf'
+import { Link } from 'react-router-dom';
 
 const AboutPageStyles = styled.div`
     padding: 20rem 0 0 0;
@@ -17,6 +18,13 @@ const AboutPageStyles = styled.div`
     }
     .left {
         flex: 3;
+        .resume{
+            font-size: 1.5rem;
+            background-color: var(--gray-1);
+            color: black;
+            padding: 0.5rem 1.5rem;
+            border-radius: 8px;
+        }
     }
     .right {
         flex: 2;
@@ -42,7 +50,7 @@ const AboutPageStyles = styled.div`
     }
     .right {
     img {
-        border: 2px solid var(--gray-1);
+        height: 500px;
     }
     }
     .about__info__items {
@@ -82,10 +90,10 @@ const About = () => {
                         <p className="about__subheading">
                             Hi, I am <span>Mehedi Hasan</span>
                         </p>
-                        <h2 className="about__heading">A freelance Web developer</h2>
+                        <h2 className="about__heading">A frontend Web developer</h2>
                         <div className="about__info">
                             <PText>
-                                I am from chittagong, Bangladesh. A place of beauty and
+                                I am from Rajshahi, Bangladesh. A place of beauty and
                                 nature. Since my childhood, i love art and design. I always
                                 try to design stuff with my unique point of view. I also love
                                 to create things that can be usefull to others.
@@ -102,7 +110,7 @@ const About = () => {
                                 place.
                             </PText>
                         </div>
-                        <Button btnText="Download CV" btnLink="#" />
+                            <Link className="resume" to={`${resume}`} target="_blank" download>Download CV</Link>
                     </div>
                     <div className="right">
                         <img src={AboutImg} alt="me" />
@@ -113,15 +121,15 @@ const About = () => {
                         <h1 className="about__info__heading">Education</h1>
                         <AboutInfoItem
                             title="School"
-                            items={['Nasirabad Govt. High School, Chattogram']}
+                            items={['Mirjapur High School And College, Rajshahi.']}
                         />
                         <AboutInfoItem
                             title="Collage"
-                            items={['BAF Shaheen College Chattogram']}
+                            items={['Varendra College Rajshahi, Bangladesh']}
                         />
                         <AboutInfoItem
-                            title="Varsity"
-                            items={['University Of Chitiagong']}
+                            title="Grduate"
+                            items={['Islami Bank Nursing College, Rajshahi']}
                         />
                     </div>
                     <div className="about__info__item">
@@ -129,31 +137,15 @@ const About = () => {
 
                         <AboutInfoItem
                             title="FrontEnd"
-                            items={['HTML', 'CSS', 'JavaScript', 'REACT']}
+                            items={['HTML', 'CSS', 'BootStrap', 'JavaScript', 'REACT']}
                         />
                         <AboutInfoItem
                             title="BackEnd"
-                            items={['Node', 'Express', 'PHP']}
+                            items={['Node', 'Express', 'MongoDb']}
                         />
                         <AboutInfoItem
-                            title="Design"
-                            items={['Photoshop', 'After Effects', 'Figma']}
-                        />
-                    </div>
-                    <div className="about__info__item">
-                        <h1 className="about__info__heading">Experiences</h1>
-
-                        <AboutInfoItem
-                            title="2010-2012"
-                            items={['junior developer at web Cifar']}
-                        />
-                        <AboutInfoItem
-                            title="2012-2016"
-                            items={['Front end developer at web Cifar ']}
-                        />
-                        <AboutInfoItem
-                            title="2016-"
-                            items={['Freelance web Developer']}
+                            title="Others"
+                            items={['Material UI', 'React Redux', 'Firebase Authentication and deploy', 'Netlify', 'Heroku']}
                         />
                     </div>
                 </div>

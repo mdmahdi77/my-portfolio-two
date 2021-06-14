@@ -155,7 +155,7 @@ const HeroSection = () => {
                         <img src={mehedi} alt="" />
                     </div>
                     <div className="hero__info">
-                        <PText>I am working as a freelance web designer and developer for 4
+                        <PText>I am working as a web designer and frontend web developer for 1
                         years. I love to design and make new web experiences for the
                         people.
                     </PText>
@@ -169,16 +169,13 @@ const HeroSection = () => {
                         <div className="hero__social__text">
                             <ul>
                                 <li>
-                                    <a href="#" target="_blank" rel="noreferrer">FB</a>
+                                    <a href="https://www.facebook.com/profile.php?id=100006789187624" target="_blank" rel="noreferrer">FB</a>
                                 </li>
                                 <li>
-                                    <a href="#" target="_blank" rel="noreferrer">IN</a>
+                                    <a href="https://www.linkedin.com/in/mehedi-hasan-389425211/" target="_blank" rel="noreferrer">LN</a>
                                 </li>
                                 <li>
-                                    <a href="#" target="_blank" rel="noreferrer">TW</a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank" rel="noreferrer">LI</a>
+                                    <a href="https://github.com/mdmahdi77" target="_blank" rel="noreferrer">GH</a>
                                 </li>
                             </ul>
                         </div>

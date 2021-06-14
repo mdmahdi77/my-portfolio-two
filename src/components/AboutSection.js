@@ -2,7 +2,7 @@ import React from 'react';
 import PText from './PText';
 import SectionTilte from './SectionTilte';
 import Button from './Button';
-import AboutImg from '../assets/images/about-sec-img.png'
+import AboutImg from '../assets/images/about2.png'
 import styled from 'styled-components';
 
 const AboutSectionStyle = styled.div`
@@ -76,8 +76,8 @@ const AboutSection = () => {
             <div className="container">
                 <div className="aboutSection__left">
                     <SectionTilte subHeading="Let Me Introduce Myself" heading="About Me"></SectionTilte>
-                    <PText>I am a freelance website designer and developer from Chittagong,
-                            Bangladesh. I create professional websites. I love art and always
+                    <PText>I am a frontend web developer from Rajshahi,
+                            Bangladesh. I create mern stack websites. I love art and always
                             try to show unique views to the audience through my design.
                     </PText>
                     <div className="aboutSection__buttons">

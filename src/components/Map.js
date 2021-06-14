@@ -50,7 +50,7 @@ const Map = () => {
                 <div className="map__card">
                     <h3 className="map__card__heading">Here Is Me</h3>
                     <PText>Mirjapur, Bindopur Bazar, Rajshahi, Bangladesh</PText>
-                    <a className="map__card__link" href="https//www.google.map.com" target="__blank">Open In Google Map</a>
+                    <a className="map__card__link" href="https://www.google.com/maps/@24.3622247,88.6504776,16z" target="__blank">Open In Google Map</a>
                 </div>
             </div>
         </MapStyles>
