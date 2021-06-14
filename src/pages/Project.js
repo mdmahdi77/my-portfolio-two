@@ -1,10 +1,95 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import SectionTilte from '../components/SectionTilte';
+import styled from "styled-components";
+import { MdSearch } from 'react-icons/md'
+import ProjectItem from '../components/ProjectItem';
+import ProjectInfo from '../assets/data/projects'
+import Footer from '../components/Footer';
+import ContactBanner from '../components/ContactBanner';
+
+const ProjectsStyles = styled.div`
+    padding: 18rem 0 0 0;
+    .projects__allItems {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 5rem;
+        margin-top: 5rem;
+      }
+      .projects__searchBar {
+        position: relative;
+        width: 300px;
+        margin-top: 5rem;
+      }
+      .projects__searchBar input {
+        width: 100%;
+        font-size: 2rem;
+        padding: 0.8rem;
+        color: var(--black);
+        border-radius: 6px;
+        outline: none;
+        border: none;
+      }
+      .projects__searchBar .searchIcon {
+        position: absolute;
+        width: 2rem;
+        right: 1rem;
+      }
+      .projects__searchBar .searchIcon path {
+        color: var(--deep-dark);
+      }
+      @media only screen and (max-width: 768px) {
+        .projects__searchBar,
+        .projects__searchBar form,
+        .projects__searchBar input {
+          width: 100%;
+        }
+      }
+`;
 
 const Project = () => {
+    const [projectData, setProjectData] = useState(ProjectInfo)
+    const [searchText, setSearchText] = useState('')
+
+    useEffect(() => {
+        if( searchText === '') return;
+        setProjectData(() => (
+            ProjectInfo.filter( item => (
+                item.name.toLowerCase().match(searchText.toLowerCase())
+            ))
+        ))
+    },[searchText])
+
+    function handleChange(e){
+        e.preventDefault()
+        setSearchText(e.target.value)
+        if(!e.target.value.length > 0){
+            setProjectData(ProjectInfo)
+        }
+    }
     return (
-        <div>
-            <h1>this is project page</h1>
-        </div>
+        <ProjectsStyles>
+            <div className="container">
+                <SectionTilte heading="Project" subHeading="Some Of My Recent Projects"></SectionTilte>
+                <div className="projects__searchBar">
+                    <form>
+                        <input type="text" value={searchText} onChange={handleChange} placeholder="Project Name" />
+                        <MdSearch className="searchIcon"></MdSearch>
+                    </form>
+                </div>
+                <div className="projects__allItems">
+                    {projectData.map((item) => (
+                        <ProjectItem
+                            key={item.id}
+                            title={item.name}
+                            desc={item.desc}
+                            img={item.img}
+                        ></ProjectItem>
+                    ))}
+                </div>
+            </div>
+            <ContactBanner></ContactBanner>
+            <Footer></Footer>
+        </ProjectsStyles>
     );
 };
 
