@@ -5,7 +5,7 @@ import AboutImg from '../assets/images/about3.png'
 import AboutInfoItem from '../components/AboutInfoItem';
 import ContactBanner from '../components/ContactBanner';
 import Footer from '../components/Footer';
-import resume from '../assets/resume/resume-7.pdf'
+import resume from '../assets/resume/resume-8.pdf'
 import { Link } from 'react-router-dom';
 
 const AboutPageStyles = styled.div`
